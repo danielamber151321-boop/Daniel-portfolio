@@ -91,13 +91,137 @@ nav a:hover{
 
 .hero{
   min-height:calc(100vh - 70px);
-  padding:9% 8%;
+  padding:8% 8%;
   display:grid;
-  grid-template-columns:1.15fr .85fr;
+  grid-template-columns:1.1fr .9fr;
   gap:8%;
   align-items:center;
   background:
-    radial-gradient(circle at 75% 30%,rgba(47,128,255,.15),transparent 35%);
+    radial-gradient(circle at 75% 25%,rgba(47,128,255,.16),transparent 32%);
+}
+
+.hero-content{
+  max-width:760px;
+}
+
+.hero h1{
+  max-width:850px;
+}
+
+.lead{
+  max-width:680px;
+  font-size:18px;
+  color:var(--muted);
+}
+
+.hero-meta{
+  display:flex;
+  gap:34px;
+  margin-top:42px;
+  padding-top:22px;
+  border-top:1px solid var(--line);
+  max-width:620px;
+}
+
+.hero-meta div{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+.hero-meta strong{
+  font-size:18px;
+  color:#fff;
+}
+
+.hero-meta span{
+  font-size:10px;
+  color:#7f8b9b;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+}
+
+.visual{
+  min-height:540px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+  padding:38px;
+  border:1px solid var(--line);
+  background:
+    linear-gradient(145deg,rgba(47,128,255,.20),transparent 42%),
+    linear-gradient(145deg,#111923,#07090d 72%);
+}
+
+.visual:before{
+  content:"";
+  position:absolute;
+  width:320px;
+  height:320px;
+  border-radius:50%;
+  background:rgba(47,128,255,.18);
+  filter:blur(80px);
+  right:-90px;
+  top:-90px;
+}
+
+.visual:after{
+  content:"";
+  position:absolute;
+  inset:18px;
+  border:1px solid rgba(101,165,255,.12);
+  pointer-events:none;
+}
+
+.visual-glow{
+  position:absolute;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background:rgba(47,128,255,.12);
+  filter:blur(60px);
+  left:-80px;
+  bottom:-80px;
+}
+
+.visual-content{
+  position:relative;
+  z-index:2;
+}
+
+.visual-label{
+  font-size:10px;
+  letter-spacing:2px;
+  font-weight:700;
+  color:var(--blue2);
+  margin-bottom:20px;
+}
+
+.visual h2{
+  font-size:clamp(48px,5vw,72px);
+  line-height:.9;
+  letter-spacing:-3px;
+  margin:0;
+}
+
+.visual h2 em{
+  color:#dbe9ff;
+}
+
+.visual-line{
+  width:70px;
+  height:2px;
+  background:var(--blue);
+  margin:26px 0 14px;
+}
+
+.visual-content p{
+  margin:0;
+  color:#7f8b9b;
+  font-size:11px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
 }
 
 .eyebrow{
@@ -583,6 +707,84 @@ DANIEL<i>.</i>
 
 
 <!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+VIDEO CREATOR • VIDEO EDITOR • AI-POWERED VIDEO
+</div>
+
+<h1>
+I turn ideas into <em>visual stories.</em>
+</h1>
+
+<p class="lead">
+I create engaging videos for brands, businesses and creators — combining professional editing, visual storytelling, 2D animation and AI-powered production to turn ideas into content people want to watch.
+</p>
+
+<div class="actions">
+
+<a class="btn primary" href="#work">
+View my work
+</a>
+
+<a class="btn secondary" href="#contact">
+Let's work together
+</a>
+
+</div>
+
+<div class="hero-meta">
+
+<div>
+<strong>3+</strong>
+<span>Years in video</span>
+</div>
+
+<div>
+<strong>AI</strong>
+<span>Powered workflow</span>
+</div>
+
+<div>
+<strong>2D</strong>
+<span>Animation</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="visual">
+
+<div class="visual-glow"></div>
+
+<div class="visual-content">
+
+<div class="visual-label">
+DANIEL VISUALS
+</div>
+
+<h2>
+EDIT.<br>
+CREATE.<br>
+<em>IMPACT.</em>
+</h2>
+
+<div class="visual-line"></div>
+
+<p>
+Video • AI • Storytelling
+</p>
+
+</div>
+
+</div>
+
+</section>
 
 <section class="hero">
 
