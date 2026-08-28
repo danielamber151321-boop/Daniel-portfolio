@@ -1,15 +1,20 @@
 <!doctype html>
 <html lang="en">
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<meta name="description" content="Daniel Olamide Taiwo — Video Creator, Video Editor and AI-powered video creator.">
+<meta name="description" content="Daniel Visuals — Video Creator, Video Editor and AI-powered video creator.">
 
-<title>Daniel Olamide Taiwo — Video Creator & Editor</title>
+<meta name="theme-color" content="#080b10">
+
+<title>Daniel Visuals — Video Creator & Editor</title>
 
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital@0;1&display=swap');
+
 
 :root{
   --bg:#080b10;
@@ -23,13 +28,16 @@
   --dark:#06080c;
 }
 
+
 *{
   box-sizing:border-box;
 }
 
+
 html{
   scroll-behavior:smooth;
 }
+
 
 body{
   margin:0;
@@ -39,618 +47,1277 @@ body{
   line-height:1.55;
 }
 
+
 a{
   text-decoration:none;
   color:inherit;
 }
 
+
+/* =========================
+   NAVIGATION
+========================= */
+
 .nav{
   position:sticky;
   top:0;
   z-index:99;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 7%;
+
+  padding:15px 7%;
+
   border-bottom:1px solid var(--line);
-  background:rgba(8,11,16,.88);
+
+  background:rgba(8,11,16,.90);
+
   backdrop-filter:blur(14px);
 }
 
-.brand{
-  font-size:23px;
-  font-weight:700;
-  letter-spacing:-.5px;
+
+/* LOGO */
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:11px;
 }
 
-.brand i{
-  color:var(--blue);
-  font-style:normal;
+
+.logo-mark{
+  width:42px;
+  height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:12px;
+
+  background:
+    linear-gradient(145deg,#2f80ff,#1555b8);
+
+  box-shadow:
+    0 8px 25px rgba(47,128,255,.20);
+
+  position:relative;
+
+  overflow:hidden;
 }
+
+
+.logo-mark:before{
+  content:"";
+
+  position:absolute;
+
+  width:27px;
+  height:19px;
+
+  border:2px solid #fff;
+
+  border-radius:5px;
+
+  left:7px;
+  top:11px;
+}
+
+
+.logo-mark:after{
+  content:"";
+
+  position:absolute;
+
+  left:17px;
+  top:15px;
+
+  width:0;
+  height:0;
+
+  border-top:5px solid transparent;
+  border-bottom:5px solid transparent;
+  border-left:8px solid #fff;
+}
+
+
+.logo-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+
+
+.logo-name{
+  font-size:17px;
+  font-weight:700;
+  letter-spacing:.8px;
+}
+
+
+.logo-sub{
+  margin-top:5px;
+
+  font-size:8px;
+  letter-spacing:2px;
+
+  color:var(--blue2);
+  font-weight:600;
+}
+
 
 nav{
   display:flex;
   gap:28px;
+
   font-size:13px;
   color:#cbd2dc;
 }
+
+
+nav a{
+  transition:.2s ease;
+}
+
 
 nav a:hover{
   color:var(--blue2);
 }
 
+
 .navbtn{
   border:1px solid var(--blue);
+
   padding:9px 16px;
+
   border-radius:30px;
+
   font-size:12px;
+
   color:#fff;
+
+  transition:.2s ease;
 }
+
 
 .navbtn:hover{
   background:var(--blue);
+
+  transform:translateY(-1px);
 }
 
+
+/* =========================
+   HERO
+========================= */
+
 .hero{
+
   min-height:calc(100vh - 70px);
+
   padding:8% 8%;
+
   display:grid;
+
   grid-template-columns:1.1fr .9fr;
+
   gap:8%;
+
   align-items:center;
+
   background:
-    radial-gradient(circle at 75% 25%,rgba(47,128,255,.16),transparent 32%);
+    radial-gradient(
+      circle at 75% 25%,
+      rgba(47,128,255,.16),
+      transparent 32%
+    );
 }
+
 
 .hero-content{
   max-width:760px;
 }
 
-.hero h1{
-  max-width:850px;
-}
 
 .eyebrow{
+
   font-size:10px;
+
   letter-spacing:2px;
+
   font-weight:700;
+
   color:var(--blue2);
+
 }
+
 
 h1{
+
   font-size:clamp(52px,7vw,92px);
+
   line-height:.98;
+
   letter-spacing:-4px;
+
   margin:20px 0;
+
 }
+
 
 em{
+
   font-family:"Playfair Display",serif;
+
   font-weight:400;
+
   color:#dbe9ff;
+
 }
+
 
 .lead{
+
   max-width:680px;
+
   font-size:18px;
+
   color:var(--muted);
+
 }
+
 
 .actions{
+
   display:flex;
+
   gap:12px;
+
   margin-top:30px;
+
   flex-wrap:wrap;
+
 }
+
 
 .btn{
+
   padding:13px 21px;
+
   border-radius:30px;
+
   font-size:13px;
+
   font-weight:600;
+
   transition:.2s ease;
+
 }
+
 
 .primary{
+
   background:var(--blue);
+
   color:#fff;
+
 }
+
 
 .primary:hover{
+
   background:#176be8;
+
   transform:translateY(-2px);
+
 }
+
 
 .secondary{
+
   border:1px solid #344152;
+
   color:#fff;
+
 }
+
 
 .secondary:hover{
+
   border-color:var(--blue);
+
   color:var(--blue2);
+
 }
 
-.hero-meta{
-  display:flex;
-  gap:34px;
-  margin-top:42px;
-  padding-top:22px;
-  border-top:1px solid var(--line);
-  max-width:620px;
-}
 
-.hero-meta div{
-  display:flex;
-  flex-direction:column;
-  gap:2px;
-}
-
-.hero-meta strong{
-  font-size:18px;
-  color:#fff;
-}
-
-.hero-meta span{
-  font-size:10px;
-  color:#7f8b9b;
-  letter-spacing:.8px;
-  text-transform:uppercase;
-}
+/* HERO VISUAL */
 
 .visual{
+
   min-height:500px;
-  background:
-    linear-gradient(145deg,rgba(47,128,255,.18),transparent 40%),
-    linear-gradient(145deg,#111923,#07090d 70%);
+
   border:1px solid var(--line);
+
   display:flex;
+
   align-items:center;
-  padding:45px;
+
+  justify-content:center;
+
+  padding:40px;
+
   color:#fff;
+
   overflow:hidden;
+
   position:relative;
+
+  background:
+    radial-gradient(
+      circle at 70% 25%,
+      rgba(47,128,255,.25),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #111923,
+      #07090d 70%
+    );
+
 }
+
 
 .visual:before{
+
   content:"";
+
   position:absolute;
+
   width:300px;
+
   height:300px;
+
   border-radius:50%;
-  background:rgba(47,128,255,.18);
+
+  background:rgba(47,128,255,.15);
+
   filter:blur(80px);
-  right:-80px;
+
+  right:-90px;
+
   top:-80px;
+
 }
+
+
+.visual-glow{
+
+  position:absolute;
+
+  width:220px;
+
+  height:220px;
+
+  border-radius:50%;
+
+  background:rgba(47,128,255,.08);
+
+  filter:blur(60px);
+
+}
+
 
 .visual-content{
+
   position:relative;
+
   z-index:2;
+
+  width:100%;
+
 }
+
 
 .visual-label{
-  font-size:11px;
-  letter-spacing:2px;
+
+  font-size:10px;
+
+  letter-spacing:3px;
+
   color:var(--blue2);
+
   font-weight:700;
-  margin-bottom:25px;
+
+  margin-bottom:24px;
+
 }
+
 
 .visual h2{
-  font-size:clamp(48px,5vw,72px);
-  line-height:.95;
+
+  font-size:clamp(48px,6vw,78px);
+
+  line-height:.92;
+
   margin:0;
-  letter-spacing:-3px;
+
+  letter-spacing:-4px;
+
 }
+
 
 .visual h2 em{
-  color:#fff;
+
+  color:var(--blue2);
+
 }
+
 
 .visual-line{
-  width:70px;
-  height:2px;
-  background:var(--blue);
-  margin:28px 0 18px;
+
+  height:1px;
+
+  width:100%;
+
+  max-width:380px;
+
+  background:linear-gradient(
+    90deg,
+    var(--blue),
+    transparent
+  );
+
+  margin-top:35px;
+
 }
 
-.visual-content p{
-  color:#8e99a8;
+
+.visual p{
+
+  margin-top:18px;
+
+  color:#7f8b9b;
+
   font-size:12px;
-  letter-spacing:1px;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
 }
+
+
+/* HERO META */
+
+.hero-meta{
+
+  display:flex;
+
+  gap:34px;
+
+  margin-top:42px;
+
+  padding-top:22px;
+
+  border-top:1px solid var(--line);
+
+  max-width:620px;
+
+}
+
+
+.hero-meta div{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:2px;
+
+}
+
+
+.hero-meta strong{
+
+  font-size:18px;
+
+  color:#fff;
+
+}
+
+
+.hero-meta span{
+
+  font-size:10px;
+
+  color:#7f8b9b;
+
+  letter-spacing:.8px;
+
+  text-transform:uppercase;
+
+}
+
+
+/* =========================
+   SKILL STRIP
+========================= */
 
 .strip{
+
   display:flex;
+
   gap:28px;
+
   flex-wrap:wrap;
+
   padding:20px 8%;
+
   border-block:1px solid var(--line);
+
   font-size:10px;
+
   letter-spacing:1.4px;
+
   font-weight:700;
+
   color:#7f8b9b;
+
 }
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 section{
+
   padding:110px 8%;
+
 }
+
 
 .head{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:8%;
+
   margin-bottom:50px;
+
 }
+
 
 h2{
+
   font-size:clamp(42px,5vw,68px);
+
   line-height:1.02;
+
   letter-spacing:-2.5px;
+
   margin:10px 0;
+
 }
+
 
 .intro{
+
   color:var(--muted);
+
   max-width:500px;
+
 }
+
+
+/* =========================
+   WORK
+========================= */
 
 .work{
+
   display:grid;
+
   grid-template-columns:1.35fr 1fr;
+
   gap:32px;
+
 }
+
 
 .card{
+
   background:var(--surface);
+
   border:1px solid var(--line);
+
   padding:0 0 18px;
+
   overflow:hidden;
+
 }
+
 
 .card:first-child{
+
   grid-row:span 2;
+
 }
+
+
+/* VIDEO */
 
 .video-wrap{
+
   background:#050608;
+
   overflow:hidden;
+
   aspect-ratio:16/10;
+
 }
+
 
 .video-wrap video{
+
   display:block;
+
   width:100%;
+
   height:100%;
+
   object-fit:cover;
+
   background:#050608;
+
 }
+
 
 .info{
+
   padding:18px 20px 0;
+
 }
+
 
 .tag{
+
   font-size:9px;
+
   letter-spacing:1.5px;
+
   font-weight:700;
+
   color:var(--blue2);
+
 }
+
 
 h3{
+
   font-size:21px;
+
   margin:5px 0;
+
 }
+
 
 .info p{
+
   font-size:13px;
+
   color:var(--muted);
+
   margin:8px 0;
+
 }
+
 
 .note{
+
   border:1px dashed #344152;
+
   padding:16px;
+
   color:var(--muted);
+
   font-size:12px;
+
   margin-top:28px;
+
 }
+
+
+/* =========================
+   SERVICES
+========================= */
 
 .dark{
+
   background:#0b0f15;
+
   color:#fff;
+
   border-block:1px solid var(--line);
+
 }
+
 
 .dark .intro{
+
   color:#9ba5b3;
+
 }
+
 
 .services{
+
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:1px;
+
   background:#27303c;
+
   margin-top:45px;
+
 }
+
 
 .services div{
+
   background:#0b0f15;
+
   padding:30px;
+
   min-height:185px;
+
+  transition:.2s ease;
+
 }
+
+
+.services div:hover{
+
+  background:#101720;
+
+}
+
 
 .services span{
+
   font-size:10px;
+
   color:var(--blue2);
+
 }
+
 
 .services h3{
+
   margin-top:30px;
+
 }
+
 
 .services p{
+
   color:#9ba5b3;
+
   font-size:13px;
+
 }
+
+
+/* =========================
+   WHY
+========================= */
 
 .why{
+
   background:#0d131c;
+
   border-bottom:1px solid var(--line);
+
 }
+
 
 .points{
+
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:45px;
+
   margin-top:55px;
+
 }
+
 
 .points h3{
+
   color:#fff;
+
 }
+
 
 .points p{
+
   color:var(--muted);
+
   font-size:14px;
+
 }
+
+
+/* =========================
+   ABOUT
+========================= */
 
 .about{
+
   display:grid;
+
   grid-template-columns:.85fr 1.15fr;
+
   gap:10%;
+
   align-items:center;
+
 }
+
 
 .about-image{
+
   width:100%;
+
   max-width:500px;
+
   overflow:hidden;
+
   border:1px solid var(--line);
+
   background:var(--surface);
+
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
+
 }
+
 
 .about-image img{
+
   display:block;
+
   width:100%;
+
   height:auto;
+
   aspect-ratio:4/5;
+
   object-fit:cover;
+
 }
+
 
 .about-content{
+
   max-width:650px;
+
 }
+
 
 .about p{
+
   font-size:16px;
+
   color:#aeb7c4;
+
 }
+
+
+/* =========================
+   TOOLS
+========================= */
 
 .tools{
+
   padding-top:20px;
+
 }
+
 
 .chips{
+
   display:flex;
+
   flex-wrap:wrap;
+
   gap:10px;
+
 }
+
 
 .chips span{
+
   border:1px solid var(--line);
+
   padding:10px 15px;
+
   border-radius:30px;
+
   font-size:12px;
+
   color:#cbd2dc;
+
+  transition:.2s ease;
+
 }
 
-/* TESTIMONIALS */
+
+.chips span:hover{
+
+  border-color:var(--blue);
+
+  color:var(--blue2);
+
+}
+
+
+/* =========================
+   TESTIMONIALS
+========================= */
 
 .testimonials{
+
   background:#070a0f;
+
   border-block:1px solid var(--line);
+
 }
+
 
 .testimonial-grid{
+
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:22px;
+
 }
+
 
 .testimonial{
+
   background:#0f141c;
+
   border:1px solid var(--line);
+
   padding:0 0 24px;
+
   overflow:hidden;
+
 }
+
 
 .testimonial-image{
+
   width:100%;
+
   aspect-ratio:16/10;
+
   object-fit:cover;
+
   display:block;
+
   background:#111822;
+
 }
+
 
 .testimonial-body{
+
   padding:22px;
+
 }
+
 
 .stars{
+
   color:#ffd45c;
+
   letter-spacing:2px;
+
   font-size:13px;
+
 }
+
 
 .quote{
+
   color:#d5dbe4;
+
   font-size:14px;
+
   margin:15px 0 18px;
+
 }
 
+
 .client{
+
   color:var(--blue2);
+
   font-size:11px;
+
   font-weight:700;
+
   letter-spacing:1px;
+
   text-transform:uppercase;
+
 }
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+
+  text-align:center;
+
+  background:#05070b;
+
+  color:#fff;
+
+}
+
+
+.contact .eyebrow{
+
+  color:var(--blue2);
+
+}
+
+
+.contact h2{
+
+  font-size:clamp(48px,7vw,88px);
+
+}
+
+
+.contact p{
+
+  color:#9ba5b3;
+
+}
+
+
+.email{
+
+  display:inline-block;
+
+  font-size:clamp(22px,3vw,38px);
+
+  color:#fff;
+
+  border-bottom:1px solid #46515f;
+
+  margin-top:8px;
+
+}
+
+
+.email:hover{
+
+  color:var(--blue2);
+
+  border-color:var(--blue);
+
+}
+
 
 /* WHATSAPP */
 
-.whatsapp-section{
-  background:#080c12;
-  border-top:1px solid var(--line);
-}
-
 .whatsapp-box{
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:60px;
-  align-items:center;
-  padding:45px;
+
+  max-width:700px;
+
+  margin:55px auto 0;
+
+  padding:35px;
+
   border:1px solid var(--line);
-  background:linear-gradient(135deg,#0e151f,#090d13);
+
+  background:#0b0f15;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:35px;
+
+  text-align:left;
+
 }
 
-.whatsapp-box h2{
-  margin-top:10px;
+
+.whatsapp-qr{
+
+  width:150px;
+
+  height:150px;
+
+  object-fit:contain;
+
+  background:#fff;
+
+  padding:8px;
+
 }
 
-.whatsapp-box p{
-  color:var(--muted);
-  max-width:620px;
+
+.whatsapp-content{
+
+  flex:1;
+
 }
+
+
+.whatsapp-content h3{
+
+  margin:0 0 8px;
+
+}
+
 
 .whatsapp-number{
-  display:inline-block;
-  margin-top:8px;
-  color:#fff;
-  font-size:20px;
-  font-weight:600;
+
+  color:#9ba5b3;
+
+  font-size:14px;
+
+  margin-bottom:18px;
+
 }
 
-.whatsapp-actions{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:25px;
-}
 
 .whatsapp-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:13px 22px;
-  border-radius:30px;
+
+  display:inline-block;
+
   background:#25D366;
-  color:#061109;
+
+  color:#fff;
+
+  padding:12px 20px;
+
+  border-radius:30px;
+
   font-size:13px;
+
   font-weight:700;
+
   transition:.2s ease;
+
 }
+
 
 .whatsapp-btn:hover{
+
   transform:translateY(-2px);
+
+  filter:brightness(1.08);
+
 }
 
-.qr-box{
-  text-align:center;
-  min-width:190px;
-}
-
-.qr-box img{
-  display:block;
-  width:170px;
-  height:170px;
-  padding:10px;
-  background:#fff;
-  margin:0 auto 12px;
-}
-
-.qr-box span{
-  display:block;
-  color:#9ba5b3;
-  font-size:11px;
-}
-
-/* CONTACT */
-
-.contact{
-  text-align:center;
-  background:#05070b;
-  color:#fff;
-}
-
-.contact .eyebrow{
-  color:var(--blue2);
-}
-
-.contact h2{
-  font-size:clamp(48px,7vw,88px);
-}
-
-.contact p{
-  color:#9ba5b3;
-}
-
-.email{
-  display:inline-block;
-  font-size:clamp(22px,3vw,38px);
-  color:#fff;
-  border-bottom:1px solid #46515f;
-  margin-top:8px;
-}
-
-.email:hover{
-  color:var(--blue2);
-  border-color:var(--blue);
-}
 
 .socials{
+
   display:flex;
+
   justify-content:center;
+
   gap:24px;
-  margin-top:30px;
+
+  margin-top:35px;
+
   color:#9ba5b3;
+
   font-size:13px;
+
   flex-wrap:wrap;
+
 }
+
 
 .socials a:hover{
+
   color:var(--blue2);
+
 }
 
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
+
   display:flex;
+
   justify-content:space-between;
+
+  align-items:center;
+
   padding:22px 8%;
+
   background:#030509;
+
   color:#697382;
+
   font-size:11px;
+
 }
+
+
+.footer-brand{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+}
+
+
+.footer-dot{
+
+  width:7px;
+
+  height:7px;
+
+  background:var(--blue);
+
+  border-radius:50%;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:850px){
 
@@ -658,213 +1325,410 @@ footer{
     display:none;
   }
 
+
+  .nav{
+    padding:13px 6%;
+  }
+
+
+  .logo-mark{
+    width:38px;
+    height:38px;
+  }
+
+
+  .logo-name{
+    font-size:15px;
+  }
+
+
+  .logo-sub{
+    font-size:7px;
+  }
+
+
   .hero,
   .head,
-  .about,
-  .whatsapp-box{
+  .about{
+
     grid-template-columns:1fr;
+
   }
+
 
   .hero{
+
     padding:70px 6%;
+
   }
+
 
   .visual{
+
     min-height:420px;
+
   }
+
 
   .hero-meta{
+
     gap:20px;
+
     flex-wrap:wrap;
+
   }
+
 
   .hero-meta div{
+
     min-width:90px;
+
   }
+
 
   section{
+
     padding:80px 6%;
+
   }
+
 
   .work{
+
     grid-template-columns:1fr;
+
   }
 
+
   .card:first-child{
+
     grid-row:auto;
+
   }
+
 
   .services,
   .points,
   .testimonial-grid{
+
     grid-template-columns:1fr;
+
   }
+
 
   .strip{
+
     padding:18px 6%;
+
   }
+
 
   .whatsapp-box{
-    padding:30px;
-    gap:35px;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:30px 20px;
+
   }
 
-  .qr-box{
-    text-align:left;
+
+  .whatsapp-content{
+
+    width:100%;
+
   }
 
-  .qr-box img{
-    margin-left:0;
+
+  .whatsapp-qr{
+
+    width:180px;
+
+    height:180px;
+
   }
+
 
   footer{
+
     flex-direction:column;
-    gap:8px;
+
+    gap:10px;
+
     padding:20px 6%;
+
+    text-align:center;
+
   }
+
 }
+
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <header class="nav">
 
-<a class="brand" href="#top">
-DANIEL<i>.</i>
+
+<a class="logo" href="#top" aria-label="Daniel Visuals home">
+
+
+<div class="logo-mark"></div>
+
+
+<div class="logo-text">
+
+<div class="logo-name">
+DANIEL VISUALS
+</div>
+
+<div class="logo-sub">
+VIDEO • AI • STORYTELLING
+</div>
+
+</div>
+
+
 </a>
 
+
 <nav>
+
 <a href="#work">Work</a>
+
 <a href="#services">Services</a>
+
 <a href="#testimonials">Testimonials</a>
+
 <a href="#about">About</a>
+
 <a href="#contact">Contact</a>
+
 </nav>
 
-<a class="navbtn" href="#contact">Let's work</a>
+
+<a class="navbtn" href="#contact">
+Let's work
+</a>
+
 
 </header>
+
 
 
 <main id="top">
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
+
 <div class="hero-content">
 
+
 <div class="eyebrow">
+
 VIDEO CREATOR • VIDEO EDITOR • AI-POWERED VIDEO
+
 </div>
 
+
 <h1>
-I turn ideas into <em>visual stories.</em>
+
+I turn ideas into
+
+<em>visual stories.</em>
+
 </h1>
 
+
 <p class="lead">
+
 I create engaging videos for brands, businesses and creators — combining professional editing, visual storytelling, 2D animation and AI-powered production to turn ideas into content people want to watch.
+
 </p>
+
 
 <div class="actions">
 
+
 <a class="btn primary" href="#work">
+
 View my work
+
 </a>
+
 
 <a class="btn secondary" href="#contact">
+
 Let's work together
+
 </a>
 
+
 </div>
+
 
 <div class="hero-meta">
 
+
 <div>
+
 <strong>3+</strong>
+
 <span>Years in video</span>
+
 </div>
 
+
 <div>
+
 <strong>AI</strong>
+
 <span>Powered workflow</span>
+
 </div>
+
 
 <div>
+
 <strong>2D</strong>
+
 <span>Animation</span>
-</div>
 
 </div>
 
+
 </div>
+
+
+</div>
+
 
 
 <div class="visual">
 
+
+<div class="visual-glow"></div>
+
+
 <div class="visual-content">
 
+
 <div class="visual-label">
+
 DANIEL VISUALS
+
 </div>
 
+
 <h2>
+
 EDIT.<br>
+
 CREATE.<br>
+
 <em>IMPACT.</em>
+
 </h2>
+
 
 <div class="visual-line"></div>
 
+
 <p>
+
 Video • AI • Storytelling
+
 </p>
 
-</div>
 
 </div>
+
+
+</div>
+
 
 </section>
 
 
+
+<!-- =========================
+     SKILL STRIP
+========================= -->
+
 <div class="strip">
 
 <span>VIDEO EDITING</span>
+
 <span>COMMERCIAL CONTENT</span>
+
 <span>SOCIAL MEDIA</span>
+
 <span>PRODUCT VIDEO</span>
+
 <span>AI VIDEO PRODUCTION</span>
+
 <span>2D ANIMATION</span>
 
 </div>
 
 
-<!-- WORK -->
+
+<!-- =========================
+     WORK
+========================= -->
 
 <section id="work">
 
+
 <div class="head">
+
 
 <div>
 
+
 <div class="eyebrow">
+
 SELECTED WORK
+
 </div>
+
 
 <h2>
+
 Work that shows<br>
+
 what I can do.
+
 </h2>
 
+
 </div>
+
 
 <p class="intro">
+
 A selection of video work demonstrating editing, storytelling, pacing, visual direction and modern production techniques.
+
 </p>
 
+
 </div>
+
 
 
 <div class="work">
@@ -874,7 +1738,9 @@ A selection of video work demonstrating editing, storytelling, pacing, visual di
 
 <article class="card">
 
+
 <div class="video-wrap">
+
 
 <video
 controls
@@ -883,46 +1749,69 @@ playsinline
 poster="commercial-thumbnail.png"
 >
 
+
 <source
 src="document_5987873735695146652.mp4"
 type="video/mp4"
 >
 
+
 Your browser does not support video playback.
+
 
 </video>
 
+
 </div>
+
 
 <div class="info">
 
+
 <div class="tag">
+
 01 • COMMERCIAL / PRODUCT
+
 </div>
+
 
 <h3>
+
 Commercial Product Video
+
 </h3>
 
-<p>
-A polished commercial-style edit focused on grabbing attention, presenting the subject clearly and maintaining visual momentum through purposeful cuts, transitions and pacing.
-</p>
 
 <p>
-<strong>Skills:</strong>
-Video editing • Commercial pacing • Visual storytelling • Transitions • Sound and timing
+
+A polished commercial-style edit focused on grabbing attention, presenting the subject clearly and maintaining visual momentum through purposeful cuts, transitions and pacing.
+
 </p>
+
+
+<p>
+
+<strong>Skills:</strong>
+
+Video editing • Commercial pacing • Visual storytelling • Transitions • Sound and timing
+
+</p>
+
 
 </div>
 
+
 </article>
+
 
 
 <!-- VIDEO 2 -->
 
 <article class="card">
 
+
 <div class="video-wrap">
+
 
 <video
 controls
@@ -931,84 +1820,128 @@ playsinline
 poster="cinematic-trailer-thumbnail.png"
 >
 
+
 <source
 src="Trailer%20%28online-video-cutter.com%29.mp4"
 type="video/mp4"
 >
 
+
 Your browser does not support video playback.
+
 
 </video>
 
+
 </div>
+
 
 <div class="info">
 
+
 <div class="tag">
+
 02 • CINEMATIC / TRAILER
+
 </div>
+
 
 <h3>
+
 Cinematic Trailer
+
 </h3>
 
-<p>
-A trailer-style edit built around atmosphere, rhythm and visual sequencing, demonstrating how editing can create anticipation and maintain audience attention.
-</p>
 
 <p>
-<strong>Skills:</strong>
-Cinematic editing • Pacing • Story structure • Visual sequencing • Sound design
+
+A trailer-style edit built around atmosphere, rhythm and visual sequencing, demonstrating how editing can create anticipation and maintain audience attention.
+
 </p>
+
+
+<p>
+
+<strong>Skills:</strong>
+
+Cinematic editing • Pacing • Story structure • Visual sequencing • Sound design
+
+</p>
+
 
 </div>
 
+
 </article>
+
 
 
 <!-- VIDEO 3 -->
 
 <article class="card">
 
+
 <div class="video-wrap">
+
 
 <video
 controls
 preload="metadata"
 playsinline
+poster="thumbnail-3.jpg"
 >
+
 
 <source
 src="Short%20film.mp4"
 type="video/mp4"
 >
 
+
 Your browser does not support video playback.
+
 
 </video>
 
+
 </div>
+
 
 <div class="info">
 
+
 <div class="tag">
+
 03 • NARRATIVE / STORYTELLING
+
 </div>
+
 
 <h3>
+
 Short Film
+
 </h3>
 
-<p>
-A narrative-focused piece demonstrating story construction, continuity, scene sequencing and the use of editing to guide the viewer through a complete visual story.
-</p>
 
 <p>
-<strong>Skills:</strong>
-Narrative editing • Storytelling • Continuity • Scene sequencing • Cinematic presentation
+
+A narrative-focused piece demonstrating story construction, continuity, scene sequencing and the use of editing to guide the viewer through a complete visual story.
+
 </p>
+
+
+<p>
+
+<strong>Skills:</strong>
+
+Narrative editing • Storytelling • Continuity • Scene sequencing • Cinematic presentation
+
+</p>
+
 
 </div>
+
 
 </article>
 
@@ -1016,122 +1949,209 @@ Narrative editing • Storytelling • Continuity • Scene sequencing • Cinem
 </div>
 
 
+
 <div class="note">
 
+
 <b>Portfolio note:</b>
+
 The work shown here is intended to demonstrate video production and editing capability. Project descriptions accurately reflect the role and contribution associated with each piece.
 
+
 </div>
+
 
 </section>
 
 
-<!-- SERVICES -->
+
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section id="services" class="dark">
 
+
 <div class="head">
+
 
 <div>
 
+
 <div class="eyebrow">
+
 CAPABILITIES
+
 </div>
+
 
 <h2>
+
 What I can<br>
+
 create for you.
+
 </h2>
 
+
 </div>
+
 
 <p class="intro">
+
 Flexible video production with a strong focus on modern AI-assisted workflows.
+
 </p>
 
+
 </div>
+
 
 
 <div class="services">
 
+
 <div>
+
 <span>01</span>
+
 <h3>Video Editing</h3>
+
 <p>
+
 Polished edits built around pacing, storytelling, sound and visual flow.
+
 </p>
+
 </div>
 
+
+
 <div>
+
 <span>02</span>
+
 <h3>AI Video Production</h3>
+
 <p>
+
 AI-assisted concepts, visuals and production workflows for modern content.
+
 </p>
+
 </div>
 
+
+
 <div>
+
 <span>03</span>
+
 <h3>Commercial & Ads</h3>
+
 <p>
+
 Attention-grabbing videos for products, services and ideas.
+
 </p>
+
 </div>
 
+
+
 <div>
+
 <span>04</span>
+
 <h3>Social Media Video</h3>
+
 <p>
+
 Short-form content built for attention, clarity and retention.
+
 </p>
+
 </div>
 
+
+
 <div>
+
 <span>05</span>
+
 <h3>Product Videos</h3>
+
 <p>
+
 Visual content that makes products clear, engaging and memorable.
+
 </p>
+
 </div>
+
+
 
 <div>
+
 <span>06</span>
+
 <h3>2D Animation</h3>
+
 <p>
+
 Motion and animated elements that make ideas more engaging.
+
 </p>
-</div>
 
 </div>
+
+
+</div>
+
 
 </section>
 
 
-<!-- WHY -->
+
+<!-- =========================
+     WHY
+========================= -->
 
 <section class="why">
 
+
 <div class="eyebrow">
+
 WHY WORK WITH ME
+
 </div>
 
+
 <h2>
+
 Creative thinking meets<br>
+
 <em>modern production.</em>
+
 </h2>
 
 
+
 <div class="points">
+
 
 <div>
 
 <h3>Versatile</h3>
 
 <p>
+
 I adapt to different video formats, audiences and creative objectives.
+
 </p>
 
 </div>
+
 
 
 <div>
@@ -1139,10 +2159,13 @@ I adapt to different video formats, audiences and creative objectives.
 <h3>AI-enabled</h3>
 
 <p>
+
 I use modern AI tools to explore ideas, accelerate production and create distinctive visuals.
+
 </p>
 
 </div>
+
 
 
 <div>
@@ -1150,339 +2173,522 @@ I use modern AI tools to explore ideas, accelerate production and create distinc
 <h3>Story-first</h3>
 
 <p>
+
 Tools are only useful when the final video communicates something clearly and effectively.
+
 </p>
 
 </div>
 
+
 </div>
+
 
 </section>
 
 
-<!-- TESTIMONIALS -->
+
+<!-- =========================
+     TESTIMONIALS
+========================= -->
 
 <section id="testimonials" class="testimonials">
 
+
 <div class="head">
+
 
 <div>
 
+
 <div class="eyebrow">
+
 CLIENT FEEDBACK
+
 </div>
+
 
 <h2>
+
 What clients say<br>
+
 about <em>Daniel.</em>
+
 </h2>
 
+
 </div>
+
 
 <p class="intro">
+
 Real feedback from previous clients about Daniel's video production, communication and creative work.
+
 </p>
 
+
 </div>
+
 
 
 <div class="testimonial-grid">
 
 
+
+<!-- TESTIMONIAL 1 -->
+
 <article class="testimonial">
 
+
 <img
+
 src="testimonial-1.png"
+
 alt="Client feedback about Daniel"
+
 class="testimonial-image"
+
 >
+
 
 <div class="testimonial-body">
 
+
 <div class="stars">
+
 ★★★★★
+
 </div>
 
+
 <p class="quote">
+
 “He was extremely pleasant and cooperative, professional from beginning to the end. I am very glad I met you after searching for the right person for so long. Thank you for helping me bring my vision to life. I’ll definitely use you again and again.”
+
 </p>
 
+
 <div class="client">
+
 Previous Client
-</div>
 
 </div>
+
+
+</div>
+
 
 </article>
 
 
+
+<!-- TESTIMONIAL 2 -->
+
 <article class="testimonial">
 
+
 <img
+
 src="testimonial-2.png"
+
 alt="Client feedback about Daniel"
+
 class="testimonial-image"
+
 >
+
 
 <div class="testimonial-body">
 
+
 <div class="stars">
+
 ★★★★★
+
 </div>
+
 
 <p class="quote">
+
 “Excellent work! The AI video was high quality, delivered on time, and exceeded our expectations. Great communication throughout. I look forward to working with you again.”
+
 </p>
 
+
 <div class="client">
+
 Previous Client
-</div>
 
 </div>
+
+
+</div>
+
 
 </article>
 
+
+
+<!-- TESTIMONIAL 3 -->
 
 <article class="testimonial">
 
+
 <img
+
 src="testimonial-3.png"
+
 alt="Client feedback about Daniel"
+
 class="testimonial-image"
+
 >
+
 
 <div class="testimonial-body">
 
+
 <div class="stars">
+
 ★★★★★
+
 </div>
+
 
 <p class="quote">
+
 “I was extremely pleased with the quality of the recent AI video project delivered by Daniel. The final product was very polished, clearly showed attention to detail and was well received. The turnaround was solid and the communication was responsive throughout the process.”
+
 </p>
 
+
 <div class="client">
+
 Previous Client
-</div>
 
 </div>
+
+
+</div>
+
 
 </article>
 
 
+
 </div>
+
 
 </section>
 
 
-<!-- ABOUT -->
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about" class="about">
 
+
 <div class="about-image">
 
+
 <img
+
 src="profile.jpeg"
+
 alt="Daniel — Video Creator and Video Editor"
+
 >
 
+
 </div>
+
 
 
 <div class="about-content">
 
+
 <div class="eyebrow">
+
 ABOUT
+
 </div>
+
 
 <h2>
+
 Hi, I'm Daniel.
+
 </h2>
 
+
 <p>
+
 I'm a video creator and video editor focused on helping brands and businesses turn ideas into compelling visual content.
+
 </p>
 
+
 <p>
+
 I take concepts from idea to execution — from developing storyboards and visual directions to editing and producing the final video. My goal is to create content that not only looks good, but is tailored to the intended audience and communicates the message effectively.
+
 </p>
 
+
 <p>
+
 I've spent the past <strong>three years working in video production</strong>, including freelance work and collaborations with creative teams and studios. I've worked with clients and organizations including <strong>Atext Studio, Vatex Lab, and Megzapixel</strong>, among others, and I currently maintain a partnership with Atext Studio.
+
 </p>
 
+
 <p>
+
 My strongest areas are <strong>video editing, AI-powered video creation, AI image generation, 2D animation, and visual storytelling</strong>. I'm comfortable working with timelines, cuts, transitions, effects, color grading, sound design, and the details that turn an idea into a polished final piece.
+
 </p>
 
+
 <p>
+
 My approach is simple: understand the idea, understand the audience, and turn it into something worth watching.
+
 </p>
+
 
 </div>
+
 
 </section>
 
 
-<!-- TOOLS -->
+
+<!-- =========================
+     TOOLS
+========================= -->
 
 <section class="tools">
 
+
 <div class="eyebrow">
+
 TOOLS & WORKFLOW
+
 </div>
+
 
 <div class="chips">
 
+
 <span>CapCut</span>
+
 <span>Adobe tools</span>
+
 <span>AI video tools</span>
+
 <span>AI image generation</span>
+
 <span>2D animation</span>
+
 <span>Video editing</span>
+
 <span>Storyboard development</span>
+
 
 </div>
 
+
 </section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+
+<div class="eyebrow">
+
+LET'S WORK
+
+</div>
+
+
+<h2>
+
+Have a video idea?<br>
+
+<em>Let's bring it to life.</em>
+
+</h2>
+
+
+<p>
+
+For projects, collaborations and remote opportunities:
+
+</p>
+
+
+
+<p>
+
+
+<a
+
+class="email"
+
+href="mailto:danielamber151321@gmail.com"
+
+>
+
+danielamber151321@gmail.com
+
+</a>
+
+
+</p>
+
 
 
 <!-- WHATSAPP -->
 
-<section class="whatsapp-section">
-
 <div class="whatsapp-box">
 
-<div>
-
-<div class="eyebrow">
-LET'S CONNECT
-</div>
-
-<h2>
-Have a project in mind?
-<br>
-<em>Message me directly.</em>
-</h2>
-
-<p>
-For project enquiries, collaborations and remote opportunities, you can contact me directly on WhatsApp.
-</p>
-
-<a
-class="whatsapp-number"
-href="https://wa.me/447462265045"
-target="_blank"
-rel="noopener"
->
-+44 7462 265045
-</a>
-
-<div class="whatsapp-actions">
-
-<a
-class="whatsapp-btn"
-href="https://wa.me/447462265045"
-target="_blank"
-rel="noopener"
->
-Message me on WhatsApp
-</a>
-
-<a
-class="btn secondary"
-href="#contact"
->
-Other contact options
-</a>
-
-</div>
-
-</div>
-
-
-<div class="qr-box">
 
 <img
+
 src="whatsapp-qr.png"
-alt="Scan to message Daniel on WhatsApp"
+
+alt="Scan to contact Daniel on WhatsApp"
+
+class="whatsapp-qr"
+
 >
 
-<span>
-Scan to chat with me on WhatsApp
-</span>
+
+<div class="whatsapp-content">
+
+
+<h3>
+
+Let's talk on WhatsApp
+
+</h3>
+
+
+<div class="whatsapp-number">
+
++44 7462 265045
 
 </div>
 
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-
-<div class="eyebrow">
-LET'S WORK
-</div>
-
-<h2>
-Have a video idea?<br>
-<em>Let's bring it to life.</em>
-</h2>
 
 <p>
-For projects, collaborations and remote opportunities:
+
+Have a project in mind? Send me a message directly on WhatsApp.
+
 </p>
 
-<p>
 
 <a
-class="email"
-href="mailto:danielamber151321@gmail.com"
+
+class="whatsapp-btn"
+
+href="https://wa.me/447462265045"
+
+target="_blank"
+
+rel="noopener"
+
 >
-danielamber151321@gmail.com
+
+Message me on WhatsApp →
+
 </a>
 
-</p>
 
+</div>
+
+
+</div>
+
+
+
+<!-- SOCIAL LINKS -->
 
 <div class="socials">
 
+
 <a
+
 href="https://www.linkedin.com/"
+
 target="_blank"
+
 rel="noopener"
+
 >
+
 LinkedIn
+
 </a>
 
+
+
 <a
+
 href="https://instagram.com/danielolamidet"
+
 target="_blank"
+
 rel="noopener"
+
 >
+
 Instagram
+
 </a>
 
+
+
 <a
+
 href="https://x.com/DanielOlam5311"
+
 target="_blank"
+
 rel="noopener"
+
 >
+
 X
+
 </a>
 
+
+
 <a
+
 href="https://facebook.com/share/1D2iR1baSx/"
+
 target="_blank"
+
 rel="noopener"
+
 >
+
 Facebook
+
 </a>
+
 
 </div>
+
 
 </section>
 
@@ -1490,18 +2696,38 @@ Facebook
 </main>
 
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-<span>
-© 2026 Daniel Olamide Taiwo
-</span>
+
+<div class="footer-brand">
+
+<span class="footer-dot"></span>
 
 <span>
-Video Creator • Video Editor • AI-powered Video
+
+© 2026 Daniel Visuals
+
 </span>
+
+</div>
+
+
+<span>
+
+Video Creator • Video Editor • AI-powered Video
+
+</span>
+
 
 </footer>
 
 
+
 </body>
+
 </html>
